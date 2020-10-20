@@ -5,7 +5,6 @@ import Input from '../../components/UI/Input/Input';
 import is from 'is_js';
 import { connect } from 'react-redux';
 import { auth } from '../../store/actions/auth';
-import { Alert } from '../../components/UI/Alert/Alert';
 
 class Auth extends Component {
   state = {
@@ -127,7 +126,6 @@ class Auth extends Component {
       <div className={classes.Auth}>
         <div>
           <h1>Authenticate</h1>
-          <Alert />
           <form onSubmit={this.submitHandler} className={classes.AuthForm}>
             {this.renderInputs()}
 

@@ -8,6 +8,7 @@ import QuizCreator from './containers/QuizCreator/QuizCreator';
 import { connect } from 'react-redux';
 import Logout from './components/Logout/Logout';
 import { autoLogin } from './store/actions/auth';
+import { Alert } from './components/UI/Alert/Alert';
 
 class App extends Component {
   componentDidMount() {
@@ -36,7 +37,12 @@ class App extends Component {
       );
     }
 
-    return <Layout>{routes}</Layout>;
+    return (
+        <Layout>
+            <Alert />
+            {routes}
+        </Layout>
+    );
   }
 }
 
